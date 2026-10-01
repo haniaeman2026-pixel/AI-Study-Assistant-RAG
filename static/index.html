@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Study Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- ================= TOPBAR ================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🎓
+            </div>
+
+            <div>
+                <h1>AI Study Assistant</h1>
+                <p>Learn Smarter with AI</p>
+            </div>
+
+        </div>
+
+
+        <div class="top-actions">
+
+            <button
+                id="themeBtn"
+                class="icon-btn"
+                title="Toggle theme"
+            >
+                ☀
+            </button>
+
+
+            <div class="profile">
+
+                <div class="profile-avatar">
+                    S
+                </div>
+
+                <span>Student</span>
+
+                <span class="chevron">
+                   ⌄
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= BODY ================= -->
+
+    <div class="layout">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <nav class="navigation">
+
+                <button
+                    class="nav-item active"
+                    data-section="chatSection"
+                >
+                    <span class="nav-icon">💬</span>
+                    <span>Chat</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="knowledgeSection"
+                >
+                    <span class="nav-icon">▣</span>
+                    <span>Knowledge Base</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="documentsSection"
+                >
+                    <span class="nav-icon">▤</span>
+                    <span>Documents</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-section="settingsSection"
+                >
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="books-illustration">
+                    📚
+                </div>
+
+                <h3>
+                    Better Learning
+                </h3>
+
+                <h3>
+                    Bigger Dreams
+                </h3>
+
+                <p>
+                    Powered by RAG + Groq
+                </p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main">
+
+
+            <!-- ================= CHAT SECTION ================= -->
+
+            <section
+                id="chatSection"
+                class="content-section active-section"
+            >
+
+                <div class="chat-layout">
+
+
+                    <!-- MAIN CHAT -->
+
+                    <div class="chat-card">
+
+
+                        <!-- HERO -->
+
+                        <div class="hero">
+
+                            <div class="hero-robot">
+                                🤖
+                            </div>
+
+                            <div class="hero-content">
+
+                                <h2>
+                                    Hello! I'm your AI Study Assistant ✨
+                                </h2>
+
+                                <p>
+                                    I can help you with Python concepts,
+                                    explain topics, answer your questions
+                                    from the uploaded study materials,
+                                    and much more!
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- FEATURE CARDS -->
+
+                        <div class="feature-grid">
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon green">
+                                    📄
+                                </div>
+
+                                <div>
+                                    <strong>PDFs</strong>
+                                    <span>Study Materials</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon purple">
+                                    🧠
+                                </div>
+
+                                <div>
+                                    <strong>RAG</strong>
+                                    <span>Smart Retrieval</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon orange">
+                                    ⚡
+                                </div>
+
+                                <div>
+                                    <strong>Groq</strong>
+                                    <span>Fast Answers</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="feature-card">
+
+                                <div class="feature-icon mint">
+                                    🎯
+                                </div>
+
+                                <div>
+                                    <strong>Better Learning</strong>
+                                    <span>Your Goals</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SUGGESTIONS -->
+
+                        <div class="suggestions">
+
+                            <h3>
+                                Try asking something like:
+                            </h3>
+
+
+                            <div class="suggestion-list">
+
+                                <button class="suggestion">
+                                    What is a Python variable?
+                                </button>
+
+                                <button class="suggestion">
+                                    Explain conditional statements
+                                </button>
+
+                                <button class="suggestion">
+                                    What is the difference between for and while loops?
+                                </button>
+
+                                <button class="suggestion">
+                                    How do functions work in Python?
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MESSAGES -->
+
+                        <div
+                            id="messages"
+                            class="messages"
+                        >
+
+                            <div class="welcome-message">
+
+                                <div class="message-avatar ai-avatar">
+                                    AI
+                                </div>
+
+                                <div class="message-body">
+
+                                    <strong>
+                                        Welcome!
+                                    </strong>
+
+                                    <p>
+                                        Build the knowledge base,
+                                        then ask a question about
+                                        your Python study material.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INPUT -->
+
+                        <form
+                            id="questionForm"
+                            class="question-form"
+                        >
+
+                            <button
+                                type="button"
+                                class="attach-btn"
+                                title="PDFs are loaded from the data folder"
+                            >
+                                📎
+                            </button>
+
+
+                            <textarea
+                                id="question"
+                                placeholder="Ask a question about your study materials..."
+                                rows="1"
+                                maxlength="1000"
+                                required
+                            ></textarea>
+
+
+                            <button
+                                type="submit"
+                                id="askBtn"
+                                class="send-btn"
+                                title="Ask Assistant"
+                            >
+                                ➤
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ================= RIGHT PANEL ================= -->
+
+                    <aside class="right-panel">
+
+
+                        <!-- KNOWLEDGE BASE -->
+
+                        <div class="side-card">
+
+                            <div class="side-card-header">
+
+                                <div class="side-title">
+
+                                    <span class="large-icon">
+                                        🗄
+                                    </span>
+
+                                    <div>
+                                        <h3>
+                                            Knowledge Base
+                                        </h3>
+
+                                        <p id="documentCount">
+                                            Checking...
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <span
+                                    id="statusBadge"
+                                    class="status-badge"
+                                >
+                                    Checking
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                id="buildBtn"
+                                class="build-btn"
+                            >
+                                ↻ &nbsp; Rebuild Knowledge Base
+                            </button>
+
+                        </div>
+
+
+                        <!-- DOCUMENTS -->
+
+                        <div class="side-card documents-card">
+
+                            <div class="side-card-header">
+
+                                <div class="side-title">
+
+                                    <span class="large-icon">
+                                        📄
+                                    </span>
+
+                                    <h3>
+                                        Study Documents
+                                    </h3>
+
+                                </div>
+
+
+                                <span id="pdfCount">
+                                    5 PDFs
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                id="documentList"
+                                class="document-list"
+                            >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TIPS -->
+
+                        <div class="side-card tips-card">
+
+                            <h3>
+                                💡 Quick Tips
+                            </h3>
+
+
+                            <div class="tip">
+                                <span>✓</span>
+                                Use specific questions for better answers
+                            </div>
+
+
+                            <div class="tip">
+                                <span>✓</span>
+                                You can ask about any chapter or concept
+                            </div>
+
+
+                            <div class="tip">
+                                <span>✓</span>
+                                Build the knowledge base after changing PDFs
+                            </div>
+
+
+                            <div class="tip">
+                                <span>✓</span>
+                                The AI searches your study documents
+                            </div>
+
+                        </div>
+
+
+                        <!-- QUOTE -->
+
+                        <div class="quote-card">
+
+                            <div class="quote-mark">
+                                “
+                            </div>
+
+                            <p>
+                                Small steps every day
+                                lead to big results.
+                            </p>
+
+                            <span>
+                                🌱 📚
+                            </span>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= KNOWLEDGE SECTION ================= -->
+
+            <section
+                id="knowledgeSection"
+                class="content-section"
+            >
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="eyebrow">
+                            RAG SYSTEM
+                        </span>
+
+                        <h2>
+                            Knowledge Base
+                        </h2>
+
+                        <p>
+                            Manage your document embeddings
+                            and semantic search database.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="knowledge-dashboard">
+
+                    <div class="big-status-card">
+
+                        <div class="status-circle">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Knowledge Base Status
+                            </h3>
+
+                            <p id="knowledgeStatusText">
+                                Checking system...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+
+                            <span>
+                                Documents
+                            </span>
+
+                            <strong id="statDocuments">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span>
+                                Chunks
+                            </span>
+
+                            <strong id="statChunks">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span>
+                                Retrieval
+                            </span>
+
+                            <strong>
+                                RAG
+                            </strong>
+
+                        </div>
+
+
+                        <div class="stat-card">
+
+                            <span>
+                                AI Model
+                            </span>
+
+                            <strong>
+                                Groq
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="knowledgeBuildBtn"
+                        class="large-build-btn"
+                    >
+                        Build / Rebuild Knowledge Base
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= DOCUMENTS SECTION ================= -->
+
+            <section
+                id="documentsSection"
+                class="content-section"
+            >
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="eyebrow">
+                            STUDY MATERIAL
+                        </span>
+
+                        <h2>
+                            Documents
+                        </h2>
+
+                        <p>
+                            Python chapters currently available
+                            to the RAG system.
+                        </p>
+                    </div>
+
+
+                    <div class="search-box">
+
+                        🔎
+
+                        <input
+                            id="documentSearch"
+                            type="text"
+                            placeholder="Search documents..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="fullDocumentList"
+                    class="full-document-list"
+                >
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SETTINGS SECTION ================= -->
+
+            <section
+                id="settingsSection"
+                class="content-section"
+            >
+
+                <div class="page-header">
+
+                    <div>
+                        <span class="eyebrow">
+                            PREFERENCES
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                        <p>
+                            Customize your study assistant.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-card">
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Appearance
+                            </h3>
+
+                            <p>
+                                Switch between light and dark mode.
+                            </p>
+
+                        </div>
+
+                        <button
+                            id="settingsThemeBtn"
+                            class="setting-button"
+                        >
+                            Toggle Theme
+                        </button>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Retrieved Context
+                            </h3>
+
+                            <p>
+                                Number of document chunks used
+                                to answer each question.
+                            </p>
+
+                        </div>
+
+
+                        <select id="topK">
+
+                            <option value="2">
+                                2 chunks
+                            </option>
+
+                            <option value="3">
+                                3 chunks
+                            </option>
+
+                            <option
+                                value="4"
+                                selected
+                            >
+                                4 chunks
+                            </option>
+
+                            <option value="5">
+                                5 chunks
+                            </option>
+
+                            <option value="6">
+                                6 chunks
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="setting-row">
+
+                        <div>
+
+                            <h3>
+                                Chat
+                            </h3>
+
+                            <p>
+                                Remove all messages from the
+                                current conversation.
+                            </p>
+
+                        </div>
+
+                        <button
+                            id="settingsClearBtn"
+                            class="danger-button"
+                        >
+                            Clear Chat
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<div
+    id="toast"
+    class="toast"
+>
+    Ready
+</div>
+
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>
