@@ -1,99 +1,206 @@
-# ✦ AI Study Assistant — RAG
+╭──────────────────────────────────────────────╮
+│                                              │
+│       ✦ AI STUDY ASSISTANT — RAG ✦         │
+│          [animated title effect]             │
+│                                              │
+│      Intelligent • Retrieval • Learning      │
+│                                              │
+╰──────────────────────────────────────────────╯
+
+        PROJECT OVERVIEW
+        ────────────────
+
+        FEATURES
+
+        RAG ARCHITECTURE
+
+        PROJECT STRUCTURE
+
+        TECHNOLOGIES
+
+        SETUP & INSTALLATION
+
+        API ENDPOINTS
+
+        HOW IT WORKS
+
+        FRONTEND
+
+        SECURITY
+
+        ─────────────────────────────────
+
+             ✦ DEVELOPED BY ✦
+                Hania Eman
+
+       AI & Data Science Student
+       ML Developer | Python Enthusiast
+
+          [animated ending]
+
+Yani README ko documentation + project branding dono banana hai, sirf text ki list nahi. 👍
+
+Agar aap mujhe apni current frontend UI ka screenshot ya woh README/reference image upload kar dein jiska aap “same color theme + same animated text” keh rahi hain, to main uske exact visual colors/style ko follow karke final README.md code bana dunga.
+
+g bana dey 
+
+Bilkul! 🔥 Ye rahi final professional + animated README. Isko directly apni README.md mein paste kar dein. Maine layout ko clean, branded, spacious aur GitHub-friendly rakha hai — aur unnecessary sections nahi bhare.
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!--                    AI STUDY ASSISTANT RAG                     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<h1>AI Study Assistant</h1>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=900&color=8B6F47&center=true&vCenter=true&width=700&lines=AI+Study+Assistant;Retrieval-Augmented+Generation;Learn.+Retrieve.+Understand." alt="Animated Project Title"/>
+
+<br>
 
 <p>
-<b>Retrieval-Augmented Generation based learning assistant for Python study material.</b>
+  <strong>📚 AI-powered study assistant built with Retrieval-Augmented Generation</strong>
 </p>
 
 <p>
-📚 PDF Knowledge Base &nbsp; • &nbsp;
-🔎 Semantic Search &nbsp; • &nbsp;
-🧠 RAG &nbsp; • &nbsp;
-⚡ FastAPI &nbsp; • &nbsp;
-🤖 Groq
+  <sub>
+    Search your study material • Retrieve relevant context • Generate grounded answers
+  </sub>
 </p>
+
+<br>
+
+<img src="https://img.shields.io/badge/Python-8B6F47?style=for-the-badge&logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/FastAPI-A0785A?style=for-the-badge&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/ChromaDB-9A8065?style=for-the-badge&logoColor=white"/>
+<img src="https://img.shields.io/badge/Groq-6F5B4B?style=for-the-badge&logoColor=white"/>
 
 </div>
 
----
-
-## 🌟 Overview
-
-**AI Study Assistant** is a Retrieval-Augmented Generation (RAG) based web application designed to answer questions from a collection of Python study materials.
-
-Instead of generating answers only from general model knowledge, the application first searches the uploaded PDF study material, retrieves the most relevant content, and then provides that context to the language model.
-
-This allows the assistant to generate answers that are grounded in the project's own study material.
+<br>
 
 ---
 
-## 🚀 What This Project Does
+## ✦ About The Project
 
-The application follows this workflow:
+**AI Study Assistant** is a Retrieval-Augmented Generation (**RAG**) application designed to answer questions from a collection of Python study materials.
+
+Instead of relying only on the language model's general knowledge, the system first searches the project's indexed study material, retrieves relevant information, and then provides that context to the AI model.
+
+This creates a study assistant whose responses are grounded in the project's own learning resources.
+
+---
+
+## ✦ How It Works
+
+<div align="center">
 
 ``
-Python Study PDFs
-       ↓
-PDF Text Extraction
-       ↓
-Text Chunking
-       ↓
-Sentence Transformer Embeddings
-       ↓
-ChromaDB Vector Database
-       ↓
-Semantic Search
-       ↓
-Relevant Study Context
-       ↓
-Groq LLM
-       ↓
-AI Answer
+┌───────────────────────┐
+│     Python PDFs       │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│   PDF Text Extraction │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│    Text Chunking      │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│ Sentence Transformers │
+│      Embeddings       │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│       ChromaDB        │
+│    Vector Storage     │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│   Semantic Retrieval  │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│     Groq LLM          │
+└──────────┬────────────┘
+           │
+           ▼
+┌───────────────────────┐
+│     AI Response       │
+└───────────────────────┘
+</div>
 
-The system therefore combines document retrieval + semantic search + LLM generation into one study assistant.
+✦ Key Features
+<table> <tr> <td width="50%">
+📚 Document Based
 
-✨ Features
-📚 Uses PDF files as the knowledge base
-🔎 Semantic similarity search
-🧩 Automatic text chunking
-🧠 Sentence Transformer embeddings
-🗄️ Persistent ChromaDB vector database
-🤖 Groq-powered response generation
-⚡ FastAPI backend
-🌐 Responsive web interface
-📄 Source-aware document retrieval
-🔐 API key stored through environment variables
-🛑 Answers are generated using retrieved study context
-📖 Included Study Material
+Uses Python PDF study material as the application's knowledge base.
+
+</td> <td width="50%">
+🔎 Semantic Search
+
+Retrieves relevant content based on meaning rather than simple keyword matching.
+
+</td> </tr> <tr> <td>
+🧠 RAG Pipeline
+
+Combines retrieval with LLM-based response generation.
+
+</td> <td>
+⚡ FastAPI Backend
+
+Provides a lightweight API layer for the application.
+
+</td> </tr> <tr> <td>
+🗄️ ChromaDB
+
+Stores and searches document embeddings using vector similarity.
+
+</td> <td>
+🤖 Groq LLM
+
+Generates responses using the retrieved study context.
+
+</td> </tr> </table>
+✦ Study Material
 
 The current knowledge base contains five Python chapters:
 
-Chapter 01
+Chapter	Topic
+01	Introduction to Python
+02	Variables and Data Types
+03	Conditional Statements
+04	Loops
+05	Functions
 
-Introduction to Python
+All study documents are placed inside the:
 
-Chapter 02
+data/
 
-Variables and Data Types
+directory.
 
-Chapter 03
+✦ Technology Stack
+<div align="center">
+Technology	Role
+🐍 Python	Core programming language
+⚡ FastAPI	Backend API
+🧠 Sentence Transformers	Text embeddings
+🗄️ ChromaDB	Vector database
+🤖 Groq	LLM response generation
+📄 PyPDF	PDF text extraction
+🌐 HTML	Frontend structure
+🎨 CSS	Frontend styling
+⚙️ JavaScript	Frontend interaction
+🔐 python-dotenv	Environment configuration
+</div>
 
-Conditional Statements
-
-Chapter 04
-
-Loops
-
-Chapter 05
-
-Functions
-
-These documents are stored inside the project's data/ directory.
-
-🏗️ Project Structure
+✦ Project Structure
 AI-Study-Assistant-RAG/
 │
 ├── app/
@@ -122,163 +229,104 @@ AI-Study-Assistant-RAG/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+✦ RAG Pipeline
+01 — PDF Processing
 
-🧠 RAG Architecture
+The application loads PDF documents from the data directory and extracts their text page by page.
 
-The application uses a complete Retrieval-Augmented Generation pipeline.
+02 — Chunking
 
-1. PDF Processing
+Extracted content is divided into smaller overlapping chunks so that relevant information can be retrieved efficiently.
 
-PDF documents are loaded from the data/ directory.
+03 — Embeddings
 
-The application extracts text page-by-page and keeps page information with the extracted content.
-
-2. Text Chunking
-
-Large documents are divided into smaller overlapping chunks.
-
-This makes it easier to retrieve the most relevant section when a user asks a question.
-
-3. Embeddings
-
-Each text chunk is converted into a numerical vector using:
+Each chunk is converted into a numerical representation using:
 
 SentenceTransformer
 all-MiniLM-L6-v2
+04 — Vector Database
 
-These embeddings represent the semantic meaning of the text.
+The embeddings are stored in ChromaDB for semantic similarity search.
 
-4. Vector Storage
+05 — Retrieval
 
-The generated embeddings are stored in:
+When a user submits a question, the question is embedded and compared with the stored document vectors.
 
-ChromaDB
+The most relevant study content is retrieved.
 
-The project uses cosine similarity for semantic retrieval.
+06 — Generation
 
-5. Retrieval
+The retrieved context is provided to the Groq LLM, which generates the final response based on the available study material.
 
-When the user asks a question, the query is converted into an embedding and compared with the stored document embeddings.
-
-The most relevant study material is retrieved.
-
-6. Generation
-
-The retrieved context is passed to the Groq language model.
-
-The model then generates the final response using the retrieved study material.
-
-🛠️ Technologies Used
-
-Technology	Purpose
-Python	Core programming language
-FastAPI	Backend API
-ChromaDB	Vector database
-Sentence Transformers	Text embeddings
-Groq	LLM response generation
-PyPDF	PDF text extraction
-HTML	Frontend structure
-CSS	Frontend styling
-JavaScript	Frontend interaction
-python-dotenv	Environment configuration
-⚙️ Installation
+✦ Installation
 1. Clone the Repository
 git clone https://github.com/haniaeman2026-pixel/AI-Study-Assistant-RAG.git
-
-Move into the project:
-
 cd AI-Study-Assistant-RAG
-2. Create a Virtual Environment
+2. Create Virtual Environment
 python -m venv venv
+3. Activate Environment
 
-Activate it on Windows:
+Windows:
 
 venv\Scripts\activate
-3. Install Dependencies
+4. Install Dependencies
 pip install -r requirements.txt
+✦ Environment Configuration
 
-🔑 Environment Variables
-
-Create a .env file in the project root.
+Create a .env file in the project root:
 
 GROQ_API_KEY=YOUR_GROQ_API_KEY
 GROQ_MODEL=openai/gpt-oss-20b
 
-Never upload your actual API key to GitHub.
+⚠️ Never expose your real API key in GitHub.
 
-The .env file is excluded using .gitignore.
+The .env file is excluded through .gitignore.
 
-▶️ Run the Application
+✦ Run The Application
 
-Start the FastAPI server with:
+Start the FastAPI server:
 
 python -m uvicorn app.main:app --reload
 
-The backend will be available at:
+The application will be available at:
 
 http://127.0.0.1:8000
-
-Open the application in your browser.
-
-🔄 Index the Study Material
-
-Before asking questions, the PDF documents need to be indexed.
-
-The indexing process:
-
-PDF
- ↓
-Extract Text
- ↓
-Create Chunks
- ↓
-Generate Embeddings
- ↓
-Store in ChromaDB
-
-Once indexing is completed, the knowledge base can be queried through the application.
-
-🔌 API Endpoints
+✦ API Endpoints
 Health Check
 GET /api/health
 
 Checks whether the backend is running.
 
-Index Documents
+Index Study Material
 POST /api/index
 
-Processes the PDFs and builds the vector knowledge base.
+Processes the PDF documents and creates the vector knowledge base.
 
-Ask a Question
+Ask Question
 POST /api/ask
 
-Sends a question to the RAG pipeline and returns an AI-generated answer based on the retrieved study material.
+Retrieves relevant study material and generates an AI response.
 
-📚 Example Questions
+✦ Example Questions
 
-The assistant can be used for questions related to the included Python chapters.
-
-Examples:
+The assistant can answer questions related to the indexed Python chapters.
 
 What is Python?
 
 What are variables in Python?
 
-What is the difference between an integer and a float?
+What is the difference between integers and floats?
 
 How does an if-else statement work?
 
 What is a for loop?
 
-What is the purpose of a while loop?
+What is a while loop?
 
 What are functions in Python?
 
 Why are functions useful?
-
-The assistant retrieves relevant content from the indexed PDFs before generating the response.
-
-🎨 Frontend
+✦ Frontend
 
 The project includes a custom frontend built with:
 
@@ -286,75 +334,54 @@ HTML
 CSS
 JavaScript
 
-The interface is designed with a clean, modern and lightweight visual style.
+The interface provides a clean and interactive environment for communicating with the RAG backend.
 
-It provides an interactive interface for:
+The frontend communicates with the FastAPI application through API requests.
 
-indexing the study material
-entering questions
-receiving AI responses
-interacting with the RAG assistant
+✦ Security
 
-The frontend communicates with the FastAPI backend through API requests.
+Sensitive configuration is kept outside the source code.
 
-🔐 Security
-
-The Groq API key is stored inside .env rather than directly inside the source code.
-
-The following files and directories are excluded from Git:
+The following are excluded from Git:
 
 .env
 venv/
 __pycache__/
+*.pyc
 chroma_db/
 .vscode/
 
-This prevents sensitive configuration and local generated files from being committed to the repository.
+This keeps API credentials and local generated files out of the repository.
 
-🎯 Project Objective
+✦ Project Objective
 
-The main objective of this project is to demonstrate how a Retrieval-Augmented Generation system can be used to build a study assistant that works with a controlled collection of educational documents.
+The purpose of this project is to demonstrate a complete Retrieval-Augmented Generation workflow using educational documents.
 
-The project combines:
+The project brings together:
 
-Document Processing
-        +
+PDF Processing
+      +
+Text Chunking
+      +
 Embeddings
-        +
+      +
 Vector Search
-        +
-Retrieval
-        +
+      +
+Context Retrieval
+      +
 LLM Generation
 
-into one complete application.
+to create an interactive AI-powered study assistant.
 
-🔮 Future Improvements
+<br> <div align="center"> <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=800&color=A0785A&center=true&vCenter=true&width=600&lines=Developed+by+Hania+Eman;AI+%26+Data+Science+Student;ML+Developer+%7C+Python+Enthusiast;Building+with+AI+%26+Python" alt="Developer Animation"/>
 
-Possible future improvements include:
+<br><br>
 
-Conversation history
-Multiple subject support
-More document formats
-Improved citation display
-Authentication
-User-specific knowledge bases
-Advanced document filtering
-Streaming AI responses
-Cloud deployment
-Study progress tracking
-👩‍💻 Developer
+<p> <sub>✦ Learn • Retrieve • Understand • Build ✦</sub> </p> </div>
 <div align="center">
-✦ Developed by Hania Eman ✦
 
-AI & Data Science Student | ML Developer | Python Enthusiast
+AI Study Assistant — RAG
 
-Built with curiosity, experimentation and a focus on practical AI development.
-
-</div>
-<div align="center">
-✦ AI Study Assistant ✦
-
-Learn • Retrieve • Understand • Build
+Built for learning. Powered by retrieval.
 
 </div> ```
