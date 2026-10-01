@@ -1,22 +1,24 @@
-
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!--                    AI STUDY ASSISTANT RAG                     -->
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=900&color=8B6F47&center=true&vCenter=true&width=700&lines=AI+Study+Assistant;Retrieval-Augmented+Generation;Learn.+Retrieve.+Understand." alt="Animated Project Title"/>
+<img 
+src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=700&size=36&duration=3000&pause=900&color=8B6F47&center=true&vCenter=true&width=760&height=70&lines=AI+Study+Assistant;Retrieval-Augmented+Generation;Learn.+Retrieve.+Understand."
+alt="AI Study Assistant - Animated Title"
+/>
 
 <br>
 
 <p>
-  <strong>📚 AI-powered study assistant built with Retrieval-Augmented Generation</strong>
+  <strong style="color:#8B6F47;">
+    📚 AI-powered study assistant built with Retrieval-Augmented Generation
+  </strong>
 </p>
 
-<p>
-  <sub>
-    Search your study material • Retrieve relevant context • Generate grounded answers
-  </sub>
+<p style="color:#A0785A;">
+  Search your study material • Retrieve relevant context • Generate grounded answers
 </p>
 
 <br>
@@ -80,12 +82,12 @@ This creates a study assistant whose responses are grounded in the project's own
            │
            ▼
 ┌───────────────────────┐
-│     Groq LLM          │
+│       Groq LLM        │
 └──────────┬────────────┘
            │
            ▼
 ┌───────────────────────┐
-│     AI Response       │
+│      AI Response      │
 └───────────────────────┘
 </div>
 
@@ -132,11 +134,9 @@ Chapter	Topic
 04	Loops
 05	Functions
 
-All study documents are placed inside the:
+All study documents are placed inside:
 
 data/
-
-directory.
 
 ✦ Technology Stack
 <div align="center">
@@ -152,7 +152,6 @@ Technology	Role
 ⚙️ JavaScript	Frontend interaction
 🔐 python-dotenv	Environment configuration
 </div>
-
 ✦ Project Structure
 AI-Study-Assistant-RAG/
 │
@@ -182,6 +181,7 @@ AI-Study-Assistant-RAG/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
 ✦ RAG Pipeline
 01 — PDF Processing
 
@@ -212,17 +212,18 @@ The most relevant study content is retrieved.
 The retrieved context is provided to the Groq LLM, which generates the final response based on the available study material.
 
 ✦ Installation
-1. Clone the Repository
+
+01 — Clone the Repository
 git clone https://github.com/haniaeman2026-pixel/AI-Study-Assistant-RAG.git
 cd AI-Study-Assistant-RAG
-2. Create Virtual Environment
+02 — Create Virtual Environment
 python -m venv venv
-3. Activate Environment
+03 — Activate Environment
 
-Windows:
+Windows PowerShell:
 
 venv\Scripts\activate
-4. Install Dependencies
+04 — Install Dependencies
 pip install -r requirements.txt
 ✦ Environment Configuration
 
@@ -326,15 +327,15 @@ LLM Generation
 
 to create an interactive AI-powered study assistant.
 
-<br> <div align="center"> <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=800&color=A0785A&center=true&vCenter=true&width=600&lines=Developed+by+Hania+Eman;AI+%26+Data+Science+Student;ML+Developer+%7C+Python+Enthusiast;Building+with+AI+%26+Python" alt="Developer Animation"/>
+<br> <div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=28&duration=2800&pause=900&color=8B6F47&center=true&vCenter=true&width=720&height=60&lines=Developed+by+Hania+Eman;AI+%26+Data+Science+Student;ML+Developer+%7C+Python+Enthusiast;Building+with+AI+%26+Python" alt="Developed by Hania Eman - Animated" />
 
 <br><br>
 
-<p> <sub>✦ Learn • Retrieve • Understand • Build ✦</sub> </p> </div>
+<p> <strong>AI & Data Science Student</strong> <br> <span>ML Developer &nbsp;|&nbsp; Python Enthusiast</span> </p> <br> <p> <sub>✦ Learn • Retrieve • Understand • Build ✦</sub> </p> </div>
 <div align="center">
 
-AI Study Assistant — RAG
-
-Built for learning. Powered by retrieval.
+<img src="https://readme-typing-svg.demolab.com?font=Playfair+Display&weight=600&size=20&duration=3000&pause=1000&color=A0785A&center=true&vCenter=true&width=520&height=45&lines=AI+Study+Assistant+—+RAG;Built+for+learning.+Powered+by+retrieval." alt="Animated Closing Text" />
 
 </div> ```
